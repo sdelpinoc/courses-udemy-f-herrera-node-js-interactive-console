@@ -17,7 +17,7 @@ const main = async () => {
     let selectedOption;
 
     const tasks = new Tasks();
-    console.log(tasks);
+    // console.log(tasks);
 
     const taskDb = readDb();
 
@@ -33,7 +33,7 @@ const main = async () => {
         switch (selectedOption) {
             case 1:
                 const description = await readInput('Description:');
-                console.log(description);
+                // console.log(description);
                 tasks.createTask(description);
                 break;
 
@@ -52,7 +52,7 @@ const main = async () => {
 
             case 5:
                 const ids = await showTasksChecklist(tasks.getListArray);
-                console.log({ ids });
+                // console.log({ ids });
                 tasks.toogleTaskStatus(ids);
                 break;
 
